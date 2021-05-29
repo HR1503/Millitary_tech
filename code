@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define F first
+#define S second
+#define pb push_back
+#define fast ios_base::sync_with_stdio(false);cin.tie(NULL);
+#define MOD 1000000007
+
+int main()
+{
+    string s1,s2;
+    cout<<"Enter the same length two strings "<<endl;
+    cout<<"Enter the password : ";
+    cin>>s1;
+    cout<<"Enter text : ";
+    cin>>s2;
+    string final;
+    int l=s1.size();
+
+
+    for(int i=0;i<l;i++)
+    {
+        int a,b;
+        a=(int)s1[i]-97;
+        b=(int)s2[i]-97;
+        
+        int ans;
+        ans=(a+b)%26;
+        
+        final+=(char)(ans+97);
+    
+    }
+    cout<<"Final String : ";
+    cout<<final<<endl;
+
+
+    return 0;
+
+}
